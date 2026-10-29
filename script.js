@@ -224,3 +224,59 @@ languageButtons.forEach((button) => {
 if (year) {
   year.textContent = new Date().getFullYear();
 }
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function setupScrollReveal() {
+  if (prefersReducedMotion.matches || !("IntersectionObserver" in window)) return;
+
+  const targets = document.querySelectorAll(
+    ".section-heading, .about-card, .about-list > div, .skill-group, .project-card, .contact-box"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const element = entry.target;
+        element.classList.add("is-visible");
+
+        const delay = Number.parseFloat(element.style.getPropertyValue("--reveal-delay")) || 0;
+        let finished = false;
+        let timer;
+
+        const finishReveal = () => {
+          if (finished) return;
+          finished = true;
+          clearTimeout(timer);
+          element.removeEventListener("animationend", onAnimationEnd);
+          element.classList.remove("reveal", "is-visible");
+          element.style.removeProperty("--reveal-delay");
+        };
+
+        function onAnimationEnd(event) {
+          if (event.target === element) finishReveal();
+        }
+
+        element.addEventListener("animationend", onAnimationEnd);
+        timer = setTimeout(finishReveal, delay + 900);
+
+        observer.unobserve(element);
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  targets.forEach((element) => {
+    const siblings = Array.from(element.parentElement.children);
+    const index = siblings.indexOf(element);
+    const delay = Math.min(index, 4) * 70;
+
+    element.style.setProperty("--reveal-delay", `${delay}ms`);
+    element.classList.add("reveal");
+    observer.observe(element);
+  });
+}
+
+setupScrollReveal();
