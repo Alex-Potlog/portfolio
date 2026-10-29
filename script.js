@@ -6,6 +6,8 @@ const themeIcon = document.querySelector(".theme-icon");
 const themeLabel = document.querySelector(".theme-label");
 const languageButtons = document.querySelectorAll(".lang-btn");
 
+const DEFAULT_LANGUAGE = "es";
+
 const translations = {
   es: {
     "nav.about": "Sobre mí",
@@ -170,24 +172,26 @@ function applyTheme(theme) {
 }
 
 function setLanguage(lang) {
+  const dictionary = translations[lang] || translations[DEFAULT_LANGUAGE];
+  const activeLanguage = translations[lang] ? lang : DEFAULT_LANGUAGE;
   const languageEntries = document.querySelectorAll("[data-i18n]");
-  document.documentElement.lang = lang;
+  document.documentElement.lang = activeLanguage;
 
   languageEntries.forEach((element) => {
     const key = element.getAttribute("data-i18n");
-    const value = translations[lang][key];
+    const value = dictionary[key];
     if (value) {
       element.textContent = value;
     }
   });
 
   languageButtons.forEach((button) => {
-    const isActive = button.dataset.lang === lang;
+    const isActive = button.dataset.lang === activeLanguage;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  localStorage.setItem("language", lang);
+  localStorage.setItem("language", activeLanguage);
 }
 
 if (navToggle && navLinks) {
@@ -210,11 +214,11 @@ if (themeToggle) {
   });
 }
 
-const savedLanguage = localStorage.getItem("language") || "es";
+const savedLanguage = localStorage.getItem("language") || DEFAULT_LANGUAGE;
 setLanguage(savedLanguage);
 
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  button.addEventListener("click", () => setLanguage(button.dataset.lang || DEFAULT_LANGUAGE));
 });
 
 if (year) {
