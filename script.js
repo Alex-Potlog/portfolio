@@ -7,6 +7,55 @@ const themeLabel = document.querySelector(".theme-label");
 const languageButtons = document.querySelectorAll(".lang-btn");
 
 const translations = {
+  es: {
+    "nav.about": "Sobre mí",
+    "nav.skills": "Habilidades",
+    "nav.projects": "Proyectos",
+    "nav.contact": "Contacto",
+    "hero.eyebrow": "Cloud Engineer • Backend • DevOps Path • AWS",
+    "hero.title": "Cloud Engineer con base sólida en código y visión hacia DevOps.",
+    "hero.lead": "Soy Hary Alexandru Potlog, Cloud Engineer con conocimientos extensos de desarrollo y una clara evolución hacia DevOps. Combino infraestructura cloud, automatización y programación para crear soluciones escalables, seguras y preparadas para crecer.",
+    "hero.badge1": "Cloud Foundations",
+    "hero.badge2": "Solutions Architect (en curso)",
+    "hero.buttonProjects": "Ver proyectos",
+    "hero.buttonContact": "Hablemos",
+    "hero.email": "Email",
+    "metric1Title": "Cloud",
+    "metric1Text": "Engineer",
+    "metric2Title": "Code",
+    "metric2Text": "Backend",
+    "metric3Title": "DevOps",
+    "metric3Text": "Path",
+    "about.eyebrow": "Sobre mí",
+    "about.title": "Perfil híbrido: cloud + desarrollo + evolución hacia DevOps.",
+    "about.p1": "Me apasiona el ecosistema cloud, pero mi valor añadido es que no solo diseño infraestructuras: también entiendo cómo se construyen, despliegan y mantienen las aplicaciones que corren sobre ellas.",
+    "about.p2": "Tengo experiencia y formación en Cloud Computing, automatización, AWS, Java, Laravel, PHP y Lambda, con una evolución clara hacia roles DevOps donde la combinación de infraestructura, automatización, pipelines y desarrollo aporta un beneficio real para cualquier negocio o equipo.",
+    "about.card1Title": "Cloud Engineering",
+    "about.card1Text": "Diseño de soluciones cloud centradas en escalabilidad, seguridad y rendimiento.",
+    "about.card2Title": "Backend Development",
+    "about.card2Text": "Base sólida en Java, PHP y Laravel para entender la aplicación que corre en la nube.",
+    "about.card3Title": "DevOps mindset",
+    "about.card3Text": "Objetivo profesional claro: evolucionar hacia DevOps mediante automatización, despliegues y observabilidad.",
+    "skills.eyebrow": "Habilidades",
+    "skills.title": "Competencias útiles para Cloud + Código + futuro DevOps.",
+    "skills.groupCloud": "Cloud",
+    "skills.groupCode": "Código",
+    "skills.groupTools": "DevOps & tools",
+    "projects.eyebrow": "Proyectos",
+    "projects.title": "Soluciones con enfoque en nube, automatización y código.",
+    "projects.card1Title": "Infraestructura cloud",
+    "projects.card1Text": "Diseño de soluciones en AWS con enfoque en escalabilidad y rendimiento.",
+    "projects.card2Title": "Aplicaciones backend",
+    "projects.card2Text": "Desarrollo con Java, PHP y Laravel para crear servicios robustos y mantenibles.",
+    "projects.card3Title": "Serverless + automation",
+    "projects.card3Text": "Implementación de Lambda y automatización para procesos más ágiles y eficientes.",
+    "projects.cardLink": "Ver proyecto",
+    "contact.eyebrow": "Contacto",
+    "contact.title": "¿Hablamos de una oportunidad Cloud / DevOps con base en desarrollo?",
+    "contact.emailButton": "alexpotloghary@gmail.com",
+    "footer.text": "©",
+    "footer.rights": "Todos los derechos reservados."
+  },
   ca: {
     "nav.about": "Sobre mi",
     "nav.skills": "Habilitats",
@@ -161,7 +210,7 @@ if (themeToggle) {
   });
 }
 
-const savedLanguage = localStorage.getItem("language") || "ca";
+const savedLanguage = localStorage.getItem("language") || "es";
 setLanguage(savedLanguage);
 
 languageButtons.forEach((button) => {
