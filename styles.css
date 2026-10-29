@@ -9,6 +9,9 @@
   --secondary: #73e0c8;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 20px 50px rgba(12, 18, 34, 0.45);
+  --cloud: #7c9cff;
+  --code: #7ae0c8;
+  --tool: #ffb86c;
 }
 
 * {
@@ -145,6 +148,26 @@ a {
   color: var(--muted);
   font-size: 1.08rem;
   margin-top: 1.25rem;
+}
+
+.mini-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.mini-badges span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(115, 224, 200, 0.35);
+  background: rgba(115, 224, 200, 0.08);
+  color: var(--secondary);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .hero-actions {
@@ -290,6 +313,24 @@ a {
   color: var(--muted);
 }
 
+.skills-groups {
+  display: grid;
+  gap: 2rem;
+}
+
+.skill-group {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1.5rem;
+}
+
+.skill-group h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(140px, 1fr));
@@ -304,6 +345,27 @@ a {
   background: rgba(255,255,255,0.03);
   color: var(--text);
   font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.skill.cloud {
+  background: rgba(124, 156, 255, 0.08);
+  border-color: rgba(124, 156, 255, 0.28);
+}
+
+.skill.code {
+  background: rgba(122, 224, 200, 0.08);
+  border-color: rgba(122, 224, 200, 0.28);
+}
+
+.skill.tools {
+  background: rgba(255, 184, 108, 0.08);
+  border-color: rgba(255, 184, 108, 0.28);
 }
 
 .projects-grid {
