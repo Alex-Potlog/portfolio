@@ -1,6 +1,6 @@
 # Portfolio — Hary Alexandru Potlog
 
-Portfolio personal de **Hary Alexandru Potlog**, Cloud Engineer con base en desarrollo backend y una evolución clara hacia DevOps. El sitio presenta su perfil, habilidades, proyectos y datos de contacto, y está desplegado en **GitHub Pages**.
+Portfolio personal de **Hary Alexandru Potlog**, Cloud Engineer especializado en AWS, con una evolución clara hacia DevOps y algún apoyo puntual de desarrollo backend. El sitio presenta su perfil, habilidades, proyectos y datos de contacto, y está desplegado en **GitHub Pages**.
 
 🔗 **Demo:** [https://alex-potlog.github.io/portfolio/](https://alex-potlog.github.io/portfolio/)
 
@@ -18,9 +18,9 @@ Portfolio personal de **Hary Alexandru Potlog**, Cloud Engineer con base en desa
 | Sección | Contenido |
 | --- | --- |
 | Inicio | Presentación, badges de certificaciones y enlaces a GitHub, LinkedIn y email |
-| Sobre mí | Perfil híbrido cloud + desarrollo + DevOps |
-| Habilidades | Competencias agrupadas en Cloud, Código y DevOps & tools |
-| Proyectos | Tarjetas de proyectos de infraestructura, backend y serverless |
+| Sobre mí | Cloud como especialidad, con DevOps como siguiente paso y apoyo puntual de backend |
+| Habilidades | Cloud destacado como foco principal, seguido de Desarrollo backend como complemento y DevOps & tools |
+| Proyectos | Tarjetas de proyectos con foco cloud, automatización y serverless |
 | Contacto | Ubicación, email y teléfono |
 
 ## Tecnologías
