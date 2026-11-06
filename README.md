@@ -20,8 +20,12 @@ Portfolio personal de **Hary Alexandru Potlog**, Cloud Engineer especializado en
 | Inicio | Presentación, badges de certificaciones y enlaces a GitHub, LinkedIn y email |
 | Sobre mí | Cloud como especialidad, con DevOps como siguiente paso y apoyo puntual de backend |
 | Habilidades | Cloud destacado como foco principal, seguido de Desarrollo backend como complemento y DevOps & tools |
-| Proyectos | Tarjetas de proyectos con foco cloud, automatización y serverless |
+| Proyectos | Tarjetas de proyectos con foco cloud, automatización y serverless, con el servidor de Minecraft en AWS como proyecto destacado |
 | Contacto | Ubicación, email y teléfono |
+
+### Proyecto destacado: servidor de Minecraft en AWS
+
+Servidor de Minecraft desplegado en **EC2** dentro de una **VPC**, pensado para no tener la instancia encendida las 24 horas. Una web estática protegida por contraseña envía la petición a **API Gateway**, que invoca una función **Lambda** con permisos **IAM** limitados para arrancar o parar la instancia. Así el servidor solo consume recursos cuando hay partida.
 
 ## Tecnologías
 

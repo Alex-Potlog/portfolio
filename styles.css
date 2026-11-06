@@ -246,7 +246,7 @@ a { color: inherit; text-decoration: none; }
 .skill.code { background: rgba(122, 224, 200, 0.08); border-color: rgba(122, 224, 200, 0.28); }
 .skill.tools { background: rgba(255, 184, 108, 0.08); border-color: rgba(255, 184, 108, 0.28); }
 
-.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); gap: 1.5rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, minmax(240px, 1fr)); gap: 1.5rem; }
 .project-card { overflow: hidden; }
 .project-card.is-featured { border-color: rgba(124,156,255,0.5); box-shadow: var(--shadow); }
 .project-card.is-featured .project-thumb { height: 244px; }
@@ -261,10 +261,16 @@ body.light-theme .thumb-tag { background: rgba(255,255,255,0.85); color: var(--t
 .thumb-one { background: linear-gradient(135deg, rgba(124,156,255,0.8), rgba(115,224,200,0.7)); }
 .thumb-two { background: linear-gradient(135deg, rgba(255,174,110,0.8), rgba(240,114,153,0.8)); }
 .thumb-three { background: linear-gradient(135deg, rgba(137,220,162,0.8), rgba(92,148,255,0.8)); }
+.thumb-minecraft { background: linear-gradient(135deg, rgba(126,217,87,0.85), rgba(94,129,244,0.8)); }
 .project-body { padding: 1.5rem; }
 .project-body h3 { margin: 0 0 0.5rem; }
 .project-body p { margin: 0 0 1rem; color: var(--muted); }
 .project-body a { color: var(--secondary); font-weight: 700; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.project-stack span {
+  padding: 0.25rem 0.65rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+  color: var(--muted); background: rgba(124,156,255,0.08); border: 1px solid rgba(124,156,255,0.3);
+}
 
 .contact-box { padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .contact-box h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.5rem); }

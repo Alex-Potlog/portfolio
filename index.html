@@ -211,6 +211,25 @@
 
           <div class="projects-grid">
             <article class="project-card is-featured">
+              <div class="project-thumb thumb-minecraft">
+                <span class="tag thumb-tag" data-i18n="projects.minecraftTag">Proyecto destacado</span>
+              </div>
+              <div class="project-body">
+                <h3 data-i18n="projects.minecraftTitle">Servidor de Minecraft en AWS</h3>
+                <p data-i18n="projects.minecraftText">
+                  Servidor de Minecraft sobre EC2 dentro de una VPC, con una web estática protegida por contraseña que lo enciende y apaga mediante Lambda y API Gateway. La instancia solo corre cuando hay partida.
+                </p>
+                <div class="project-stack" aria-label="Tecnologías del proyecto">
+                  <span>EC2</span>
+                  <span>Lambda</span>
+                  <span>API Gateway</span>
+                  <span>VPC</span>
+                  <span>IAM</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
               <div class="project-thumb thumb-one">
                 <span class="tag thumb-tag" data-i18n="projects.card1Tag">Foco cloud</span>
               </div>
@@ -262,6 +281,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
   </body>
 </html>
