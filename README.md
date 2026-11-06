@@ -34,9 +34,11 @@ Portfolio personal de **Hary Alexandru Potlog**, Cloud Engineer especializado en
 
 ```
 portfolio/
-├── index.html    # Estructura y contenido del sitio
-├── styles.css    # Estilos, temas y animaciones
-├── script.js     # Traducciones, tema, menú móvil y animaciones
+├── index.html        # Estructura y contenido del sitio
+├── styles.css        # Estilos, temas y animaciones
+├── script.js         # Traducciones, tema, menú móvil y animaciones
+├── assets/
+│   └── profile.jpg   # Foto de perfil
 └── README.md
 ```
 
