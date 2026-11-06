@@ -22,6 +22,7 @@ const translations = {
     "hero.buttonProjects": "Ver proyectos",
     "hero.buttonContact": "Hablemos",
     "hero.email": "Email",
+    "hero.avatarAlt": "Retrato de Hary Alexandru Potlog",
     "metric1Title": "Cloud",
     "metric1Text": "Engineer",
     "metric2Title": "Code",
@@ -76,6 +77,7 @@ const translations = {
     "hero.buttonProjects": "Veure projectes",
     "hero.buttonContact": "Parlem",
     "hero.email": "Email",
+    "hero.avatarAlt": "Retrat de Hary Alexandru Potlog",
     "metric1Title": "Cloud",
     "metric1Text": "Engineer",
     "metric2Title": "Code",
@@ -130,6 +132,7 @@ const translations = {
     "hero.buttonProjects": "View projects",
     "hero.buttonContact": "Let’s talk",
     "hero.email": "Email",
+    "hero.avatarAlt": "Portrait of Hary Alexandru Potlog",
     "metric1Title": "Cloud",
     "metric1Text": "Engineer",
     "metric2Title": "Code",
@@ -197,6 +200,14 @@ function setLanguage(lang) {
     const value = dictionary[key];
     if (value) {
       element.textContent = value;
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-alt");
+    const value = dictionary[key];
+    if (value) {
+      element.setAttribute("alt", value);
     }
   });
 
