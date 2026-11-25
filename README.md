@@ -45,37 +45,6 @@ portfolio/
 │   └── profile.jpg   # Foto de perfil
 └── README.md
 ```
-
-## Ejecutar en local
-
-No requiere instalación ni compilación. Basta con abrir `index.html` en el navegador o servir la carpeta con cualquier servidor estático:
-
-```bash
-# Opción 1: Python
-python3 -m http.server 8000
-
-# Opción 2: Node.js
-npx serve .
-```
-
-Después, abre [http://localhost:8000](http://localhost:8000).
-
-## Despliegue en GitHub Pages
-
-El sitio se publica directamente desde la rama `main`:
-
-1. En el repositorio, ve a **Settings → Pages**.
-2. En *Build and deployment*, selecciona **Deploy from a branch**.
-3. Elige la rama `main` y la carpeta `/ (root)`.
-4. Guarda los cambios; GitHub publicará el sitio en `https://alex-potlog.github.io/portfolio/`.
-
-## Personalización
-
-- **Contenido y textos:** edita `index.html` y el objeto `translations` en `script.js` (claves `es`, `ca` y `en`).
-- **Idioma por defecto:** cambia la constante `DEFAULT_LANGUAGE` en `script.js`.
-- **Colores y tipografía:** modifica las variables CSS definidas al inicio de `styles.css`.
-- **Tema inicial:** el sitio usa el tema oscuro por defecto; el claro se activa desde el botón de la cabecera.
-
 ## Contacto
 
 - **Email:** [alexpotloghary@gmail.com](mailto:alexpotloghary@gmail.com)
